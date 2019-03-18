@@ -11,7 +11,6 @@ var bad_browser = function() {
 if (! window.AudioContext) {
     if (! window.webkitAudioContext) {
         bad_browser();
-        return null;
     }
     window.AudioContext = window.webkitAudioContext;
 }
