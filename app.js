@@ -161,7 +161,11 @@ function tempo() {
     return tempo;
 }
 
-
+function resumeCtx() {
+	if (ctx && ctx.status !== 'running') {
+		ctx.resume()
+	}
+}
 
 //main sound generating function.  Receives attributes and creates appropriate note
 function play(hertz, sustain, octave) {
