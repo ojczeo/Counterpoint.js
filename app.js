@@ -4,6 +4,9 @@
 //stringParser returns an array of arrays.  At each index of stringParser the corresponding array is referenced for exact frequency, note duration, and octave value before being sent at a set interval (depending on tempo) to the play function which creates the sounds.
 //if the add additional instrument button is pressed, a new input and corresponding canvas is added to the DOM.
 
+var bad_browser = function() {
+	alert('Your browser is not supported!');
+}
 
 if (! window.AudioContext) {
     if (! window.webkitAudioContext) {
