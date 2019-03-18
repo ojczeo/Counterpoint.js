@@ -5,13 +5,13 @@
 //if the add additional instrument button is pressed, a new input and corresponding canvas is added to the DOM.
 
 var bad_browser = function() {
-	alert('Your browser is not supported!');
+	window.alert('Your browser is not supported!');
 }
 
 if (! window.AudioContext) {
     if (! window.webkitAudioContext) {
         bad_browser();
-        return;
+        return null;
     }
     window.AudioContext = window.webkitAudioContext;
 }
